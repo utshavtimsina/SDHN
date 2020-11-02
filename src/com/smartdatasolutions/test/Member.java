@@ -1,5 +1,8 @@
 package com.smartdatasolutions.test;
 
+import java.io.File;
+import java.io.FileWriter;
+
 public class Member {
 
 	private String	id;
@@ -81,7 +84,8 @@ public class Member {
 
 	public String toCSVString( ) {
 		//TODO implement this
-		return null;
+		 return zip+"_outputFile.csv";
+
 	}
 
 }

@@ -6,30 +6,22 @@ import com.smartdatasolutions.test.MemberFileConverter;
 import com.smartdatasolutions.test.MemberImporter;
 
 import java.io.File;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main extends MemberFileConverter {
-   public MemberImporter imp;
+
 	@Override
 	protected MemberExporter getMemberExporter( ) {
 		// TODO
-		return null;
+		MemberExporter exporter = new MemberExporterImpl();
+		return exporter;
 	}
 
 	@Override
 	protected MemberImporter getMemberImporter( ) {
 		// TODO
 		MemberImporter importer = new MemberImporterImpl();
-		try{
-			for (Member m: importer.importMembers(new File("Members.txt"))
-			) {
-				System.out.println(m.toString());
-			}
-
-		}catch (Exception e){
-			e.printStackTrace();
-		}
 		return importer;
 	}
 
@@ -43,13 +35,42 @@ public class Main extends MemberFileConverter {
 	@Override
 	protected Map< String, List< Member >> splitMembersByState( List< Member > validMembers ) {
 		// TODO
-		return null;
+		Map<String ,List<Member>> map= new HashMap<String ,List<Member>>();
+
+		Set<String> states = new HashSet<>();
+		for(Member mem: validMembers){
+
+
+
+				if(map.keySet().size()==0){
+					map.put(mem.getState(),Arrays.asList(mem));
+					states.add(mem.getState());
+					continue;
+				}
+//				System.out.println("each ENtry");
+				if(states.contains(mem.getState()) ){
+					List<Member> m = map.get(mem.getState());
+//					System.out.println("have to add");
+//					m.add(mem);
+//					map.put(mem.getState(),m);
+				}else{
+					map.put(mem.getState(), Arrays.asList(mem));
+//					states.add(mem.getState());
+
+				}
+			states.add(mem.getState());
+
+
+		}
+		System.out.println("User Syaye"+states);
+		return map;
 	}
 
-	public static void main( String[] args ) {
+	public static void main( String[] args ) throws Exception {
 
-		new Main().getMemberImporter();
 
+
+		new Main().convert(new File("Members.txt"),":classpath","_outputFile.csv");
 
 		//TODO
 	}

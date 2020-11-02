@@ -55,7 +55,7 @@ public class MemberImporterImpl implements MemberImporter {
 				mem.setFirstName(temp.get(2));
 				mem.setAddress(temp.get(3));
 				mem.setCity(temp.get(4));
-				mem.setState(temp.get(5));
+				mem.setState(temp.get(5).trim());
 				mem.setZip(temp.get(6));
 				members.add(mem);
 
