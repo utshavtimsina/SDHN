@@ -50,13 +50,13 @@ public class MemberImporterImpl implements MemberImporter {
 				}
 
 				Member mem = new Member();
-				mem.setId(temp.get(0));
-				mem.setLastName(temp.get(1));
-				mem.setFirstName(temp.get(2));
-				mem.setAddress(temp.get(3));
-				mem.setCity(temp.get(4));
+				mem.setId(temp.get(0).trim());
+				mem.setLastName(temp.get(1).trim());
+				mem.setFirstName(temp.get(2).trim());
+				mem.setAddress(temp.get(3).trim());
+				mem.setCity(temp.get(4).trim());
 				mem.setState(temp.get(5).trim());
-				mem.setZip(temp.get(6));
+				mem.setZip(temp.get(6).trim());
 				members.add(mem);
 
 				line = br.readLine( );

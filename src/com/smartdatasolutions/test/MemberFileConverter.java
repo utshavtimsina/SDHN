@@ -31,24 +31,24 @@ public abstract class MemberFileConverter {
 		 * Filter :
 		 */
 
-//		List< Member > validMembers = getNonDuplicateMembers( membersFromFile );
-		Map< String, List< Member >> membersFilteredByState = splitMembersByState( membersFromFile );
-		System.out.println(membersFilteredByState);
+		List< Member > validMembers = getNonDuplicateMembers( membersFromFile );
+		Map< String, List< Member >> membersFilteredByState = splitMembersByState( validMembers );
+//		System.out.println(membersFilteredByState);
 		/*
 		 * Write :
 		 */
-//		for ( Map.Entry< String, List< Member >> map: membersFilteredByState.entrySet( ) ) {
-//
-//
-//			String state = map.getKey( );
-//			List< Member > membersPerState = map.getValue( );
-//
-//			File outputFile = new File( outputFilePath + File.separator + state + "_" + outputFileName );
-//
-//			MemberExporter exporter = getMemberExporter( );
-//			writeMembers( outputFile, exporter, membersPerState );
-//
-//		}
+		for ( Map.Entry< String, List< Member >> map: membersFilteredByState.entrySet( ) ) {
+
+
+			String state = map.getKey( );
+			List< Member > membersPerState = map.getValue( );
+
+			File outputFile = new File( outputFilePath + File.separator + state + "_" + outputFileName );
+
+			MemberExporter exporter = getMemberExporter( );
+			writeMembers( outputFile, exporter, membersPerState );
+
+		}
 
 	}
 

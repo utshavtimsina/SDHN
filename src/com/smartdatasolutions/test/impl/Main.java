@@ -29,7 +29,13 @@ public class Main extends MemberFileConverter {
 	protected List< Member > getNonDuplicateMembers( List< Member > membersFromFile ) {
 
 		// TODO
-		return null;
+		Set<Member> set = new LinkedHashSet<>();
+		set.addAll(membersFromFile);
+		membersFromFile.clear();
+		membersFromFile.addAll(set);
+
+
+		return membersFromFile;
 	}
 
 	@Override
@@ -38,8 +44,9 @@ public class Main extends MemberFileConverter {
 		Map<String ,List<Member>> map= new HashMap<String ,List<Member>>();
 
 		Set<String> states = new HashSet<>();
-		for(Member mem: validMembers){
 
+		for(Member mem: validMembers){
+			List<Member> m = new ArrayList<>();
 
 
 				if(map.keySet().size()==0){
@@ -47,22 +54,22 @@ public class Main extends MemberFileConverter {
 					states.add(mem.getState());
 					continue;
 				}
-//				System.out.println("each ENtry");
+
 				if(states.contains(mem.getState()) ){
-					List<Member> m = map.get(mem.getState());
-//					System.out.println("have to add");
-//					m.add(mem);
-//					map.put(mem.getState(),m);
+
+					m.addAll(map.get(mem.getState()));
+					m.add(mem);
+					map.put(mem.getState(),m);
+
 				}else{
 					map.put(mem.getState(), Arrays.asList(mem));
-//					states.add(mem.getState());
 
 				}
 			states.add(mem.getState());
 
 
 		}
-		System.out.println("User Syaye"+states);
+//		System.out.println("User Syaye"+states);
 		return map;
 	}
 
@@ -70,7 +77,7 @@ public class Main extends MemberFileConverter {
 
 
 
-		new Main().convert(new File("Members.txt"),":classpath","_outputFile.csv");
+		new Main().convert(new File("Members.txt"),"./","outputFile.csv");
 
 		//TODO
 	}

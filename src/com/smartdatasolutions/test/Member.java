@@ -69,22 +69,17 @@ public class Member {
 		this.zip = zip;
 	}
 
-	@Override
-	public String toString() {
-		return "Member{" +
-				"id='" + id + '\'' +
-				", address='" + address + '\'' +
-				", city='" + city + '\'' +
-				", firstName='" + firstName + '\'' +
-				", lastName='" + lastName + '\'' +
-				", state='" + state + '\'' +
-				", zip='" + zip + '\'' +
-				'}';
-	}
 
 	public String toCSVString( ) {
 		//TODO implement this
-		 return zip+"_outputFile.csv";
+		 return  id +
+				 "," + address   +
+				 ",  " + city   +
+				 ",  " + firstName   +
+				 ", " + lastName  +
+				 ",  " + state +
+				 ",  " + zip +
+				 "\n";
 
 	}
 

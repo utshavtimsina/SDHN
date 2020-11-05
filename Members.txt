@@ -1,3 +1,18 @@
+101396885   ALVA                     CAROLA                   4829 JAUREGUI BLVD            CORCORAN            IL  55357                          
+727344064   FASSETT                  DAINA                    8614 LIPSEY PKWY              LEWISTON            MN  55952                          
+222743521   MCSHANE                  MIKI                     2220 KIEL PKWY                ROCHERT             MN  56578                          
+581993933   LAFAVE                   GIANNA                   5933 JAWORSKI RD              UTICA               MN  55979                          
+93804840    KEARSE                   RICKI                    6236 NICKLES BLVD             ANDOVER             OK  55304                          
+949638481   BULLER                   TERISA                   808 BLAZER BLVD               NEW GERMANY         MN  55367                          
+330287180   HOUSLEY                  JAYMIE                   3440 PAULUS ST                PUPOSKY             MN  56667                          
+516133562   GLIDEWELL                GAYNELLE                 1251 REVELL AVE               ELMORE              MN  56027                          
+536729166   RIDENHOUR                LAQUANDA                 1939 HURDLE BLVD              ABMPS               OK  55472                          
+699061261   STANDRIDGE               KARENA                   9801 LOWTHER ST               ALDEN               MN  56009                          
+125859470   CANCEL                   SHARIE                   8562 MCGAHA BLVD              CUSSON              MN  55771                          
+715174459   STCYR                    JACELYN                  6934 LAUDERDALE ST            MAPLE PLAIN         MN  55576                          
+250198926   ABSHER                   LACHELLE                 9569 REVELL ST                YOUNG AMERICA       MN  55551                          
+935075668   ANDINO                   BLOSSOM                  3045 LIPSEY AVE               FDCI                MN  56399                          
+564068468   BACKER                   MARLINE                  8517 DUDEK BLVD               SAINT PAUL          MN  55128                          
 525322350   CIMINO                   MARAGRET                 4331 SQUIRE ST                NORWOOD YOUNG AMERICMN  55473                          
 362170285   CLARE                    JALISA                   1035 TO RD                    GOODVIEW            MN  55987                          
 61041160    TWOMEY                   CHERY                    9574 OMEARA PKWY              ROCKFORD            IL  55373                          
